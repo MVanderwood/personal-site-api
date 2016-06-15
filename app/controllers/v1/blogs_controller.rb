@@ -1,4 +1,4 @@
-class V1::BlogsController < ApplicationController
+class V1::BlogsController < V1::ApplicationController
 
   #GET /api/v1/blogs
   def index
