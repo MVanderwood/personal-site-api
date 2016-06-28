@@ -1,4 +1,4 @@
-json.blogs @blogs do |blog|
+json.array! @blogs do |blog|
   json.id blog.id
   json.title blog.title
   json.content blog.content
