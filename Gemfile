@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'pg'
+gem 'dotenv-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'spring', :group => :development
 
