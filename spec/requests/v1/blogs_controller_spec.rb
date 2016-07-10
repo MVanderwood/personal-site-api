@@ -3,11 +3,10 @@ require 'rails_helper'
 describe 'Blogs API', type: :request do
   describe 'GET #index' do
     it 'populates an array of blogs' do
-      blog1 = FactoryGirl.create(:blog)
-      blog2 = FactoryGirl.create(:blog)
+      3.times { FactoryGirl.create(:blog) }
       get '/v1/blogs', nil, { 'HTTP_ACCEPT' => 'application/vnd.blogs.v1' }
       json = JSON.parse(response.body)
-      expect(json['blogs'].length).to eq(2)
+      expect(json.length).to eq(3)
     end
 
     it 'responds with HTTP success' do
