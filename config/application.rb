@@ -43,7 +43,7 @@ module PersonalSiteApi
     end
     config.action_dispatch.default_headers = {
       "Access-Control-Allow-Origin" => ENV["CLIENT_URL"],
-      "Access-Control-Request-Method" => %w{GET POST PATCH PUT DELETE}.join(",")
+      "Access-Control-Request-Method" => %w{GET POST PATCH PUT OPTIONS DELETE}.join(",")
     }
   end
 end
